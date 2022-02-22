@@ -18,6 +18,15 @@ export default makeStyles((theme) => ({
     textShadow: "none",
     backgroundColor: "white",
   },
+  fonts: {
+    color: "#fff",
+    textShadow: "1px 1px 1px #ccc",
+    fontSize: "1.5em",
+    padding: "5px",
+    margin: "5px",
+    position: "relative",
+    right: "50px",
+  },
   input: {
     appearance: "none",
     border: "none",

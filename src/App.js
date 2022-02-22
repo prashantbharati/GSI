@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
-import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Typography } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 function App() {
@@ -86,8 +86,21 @@ function App() {
           Send Message
         </Button>
         {/* <FontAwesomeIcon icon="fa-brands fa-instagram" /> */}
-        <FaInstagram />
       </form>
+      <div>
+        <FaInstagram
+          className={classes.fonts}
+          styles={{ backgroundColor: "white", margin: "100px" }}
+        />
+        <FaTwitter
+          className={classes.fonts}
+          styles={{ backgroundColor: "white", padding: "20px" }}
+        />
+        <FaYoutube
+          className={classes.fonts}
+          styles={{ backgroundColor: "white", padding: "20px" }}
+        />
+      </div>
     </div>
   );
 }
