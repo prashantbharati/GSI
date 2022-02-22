@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import useStyles from "./styles";
 function App() {
+  const classes = useStyles();
   const [contact, setContact] = useState({
     fName: "",
     lName: "",
@@ -34,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className={classes.form}>
       <h1>
         Hello {contact.fName} {contact.lName}
       </h1>
