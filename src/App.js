@@ -35,12 +35,10 @@ function App() {
   }
 
   return (
-    <div className={classes.form}>
-      <h1>
-        Hello {contact.fName} {contact.lName}
-      </h1>
-      <p>{contact.email}</p>
-      <form>
+    <div className={classes.div1}>
+      <h1>Contact Us</h1>
+
+      <form className={classes.form}>
         <input
           onChange={handleChange}
           value={contact.fName}
