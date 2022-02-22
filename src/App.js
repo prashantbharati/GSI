@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 function App() {
   const classes = useStyles();
   const [contact, setContact] = useState({
@@ -36,22 +38,25 @@ function App() {
 
   return (
     <div className={classes.div1}>
-      <h1>Contact Us</h1>
+      <h1 className={classes.title}>Contact Us</h1>
 
       <form className={classes.form}>
         <input
+          className={classes.input}
           onChange={handleChange}
           value={contact.fName}
           name="fName"
           placeholder="First Name"
         />
         <input
+          className={classes.input}
           onChange={handleChange}
           value={contact.lName}
           name="lName"
           placeholder="Last Name"
         />
         <input
+          className={classes.input}
           onChange={handleChange}
           value={contact.email}
           name="email"
