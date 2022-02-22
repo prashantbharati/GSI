@@ -9,6 +9,15 @@ export default makeStyles((theme) => ({
 
     gap: "30px",
   },
+  button: {
+    fontSize: "15px",
+    fontWeight: "bold",
+    position: "relative",
+    right: "50px",
+    color: "black",
+    textShadow: "none",
+    backgroundColor: "white",
+  },
   input: {
     appearance: "none",
     border: "none",
@@ -22,6 +31,13 @@ export default makeStyles((theme) => ({
     textAlign: "center",
   },
   title: {
+    position: "relative",
+    right: "50px",
+    color: "white",
+  },
+  label: {
+    position: "relative",
+    right: "90px",
     color: "white",
   },
 }));

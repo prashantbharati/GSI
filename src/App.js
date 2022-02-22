@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+
+import { Typography } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 function App() {
+  const handlemyclick = () => {};
   const classes = useStyles();
   const [contact, setContact] = useState({
     fName: "",
@@ -38,31 +40,51 @@ function App() {
 
   return (
     <div className={classes.div1}>
-      <h1 className={classes.title}>Contact Us</h1>
-
+      <br />
+      <br /> <br /> <br />
       <form className={classes.form}>
+        <Typography className={classes.title} variant="h4">
+          Contact Us
+        </Typography>
+
+        <Typography className={classes.label}>Name</Typography>
+
         <input
           className={classes.input}
           onChange={handleChange}
           value={contact.fName}
           name="fName"
-          placeholder="First Name"
+          placeholder="Enter your full name"
         />
+
+        <Typography className={classes.label}>Email</Typography>
         <input
           className={classes.input}
           onChange={handleChange}
           value={contact.lName}
           name="lName"
-          placeholder="Last Name"
+          placeholder="Enter your email"
         />
+
+        <Typography className={classes.label}>Details</Typography>
         <input
           className={classes.input}
           onChange={handleChange}
           value={contact.email}
           name="email"
-          placeholder="Email"
+          placeholder="Enter your project details"
         />
-        <button>Submit</button>
+        <Button
+          variant="contained"
+          //   backgroundColor="white"
+          //   textColor="black"
+          color="black"
+          size="large"
+          className={classes.button}
+          onClick={handlemyclick}
+        >
+          Send Message
+        </Button>
       </form>
     </div>
   );
