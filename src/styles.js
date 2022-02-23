@@ -13,7 +13,7 @@ export default makeStyles((theme) => ({
     fontSize: "15px",
     fontWeight: "bold",
     position: "relative",
-    right: "50px",
+    right: "40px",
     color: "black",
     textShadow: "none",
     backgroundColor: "white",
