@@ -5,11 +5,22 @@ import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Typography } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 const api = axios.create({
-  baseURL: `https://localhost:5000/posts`,
+  baseURL: `http://localhost:5000/posts`,
 });
 function App() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const { data } = await api.post("/", {
+      name: contact.name,
+      email: contact.email,
+      details: contact.details,
+    });
+    try {
+      console.log(data, "post");
+    } catch (error) {
+      console.log(error);
+    }
 
     console.log(contact);
   };
@@ -66,12 +77,12 @@ function App() {
           placeholder="Enter your full name"
         />
 
-        <Typography className={classes.label}>details</Typography>
+        <Typography className={classes.label}>Email</Typography>
         <input
           className={classes.input}
           onChange={handleChange}
           value={contact.email}
-          name="details"
+          name="email"
           placeholder="Enter your details"
         />
 

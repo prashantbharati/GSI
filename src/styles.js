@@ -35,6 +35,7 @@ export default makeStyles((theme) => ({
     fontSize: "16px",
     background:
       "linear-gradient(90deg,#ffffff,#ffffff) left bottom/100% 2px no-repeat",
+    color: "white",
   },
   div1: {
     textAlign: "center",

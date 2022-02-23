@@ -19,6 +19,23 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
+app.post("/posts", async (req, res) => {
+  const post = req.body;
+  console.log(post);
+
+  const newPostMessage = new PostMessage({
+    ...post,
+  });
+
+  try {
+    await newPostMessage.save();
+
+    res.status(201).json(newPostMessage);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
+});
+
 const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.CONNECTION_URL, {
